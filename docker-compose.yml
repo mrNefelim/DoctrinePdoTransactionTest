@@ -1,0 +1,25 @@
+web:
+  build: .
+  ports:
+    - "8000:80"
+    - "8080:8080"
+  volumes:
+    - ./:/var/www
+  links:
+    - db
+  environment:
+    DB_HOST: db
+    DB_DATABASE: habitudedb
+    DB_USERNAME: root
+    DB_PASSWORD:
+    DB_CONNECTION: mysql
+
+db:
+  image: mysql:5.7
+  ports:
+    - "33061:3306"
+  environment:
+    MYSQL_DATABASE: habitudedb
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+  volumes:
+    - ./databases:/var/lib/mysql

@@ -1,0 +1,25 @@
+{
+  "name": "nefelim/doctrine-pdo-transaction-test",
+  "description": "Тестируем работу транзакций при сочетании стандартного PDO и Doctrine ORM",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Дмитрий Сорокин",
+      "email": "dmasorokin@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "doctrine/dbal": "^2.10",
+    "doctrine/common": "^2.9",
+    "doctrine/migrations": "^1.0",
+    "doctrine/orm": "2.6.3",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "DoctrinePdoTransactionTest\\": "src/"
+    }
+  }
+}
