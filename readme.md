@@ -1,0 +1,1 @@
+Find out if the doctrine can work in a transaction initiated through a simple init
